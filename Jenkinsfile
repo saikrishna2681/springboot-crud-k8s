@@ -16,8 +16,7 @@ node {
   }
 
   stage('push_to_Artifactory') {
-    def server = Artifactory.server 'Artifactory'
-    url: 'http://http://3.87.51.27:8082/', username: 'admin', password: 'Sai@2681'
+    def server = Artifactory.server 'test1'
     def uploadSpec = 
     """
     {
