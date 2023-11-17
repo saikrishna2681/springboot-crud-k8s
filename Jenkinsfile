@@ -9,4 +9,7 @@ node {
   stage('docker build') {
     sh 'docker build -t springapp .'
   }
+  stage('docker push') {
+    sh 'docker push springapp'
+  }
 }
