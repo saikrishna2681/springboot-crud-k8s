@@ -23,7 +23,7 @@ node {
     "files": [
         {
             "pattern": "*/target/*.jar",
-            "target": "test"
+            "target": "test/test/"
         }
       ]
     }"""
