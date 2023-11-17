@@ -7,8 +7,6 @@ node {
     sh "${mvnhome}/bin/mvn package -DskipTests"
   }
   stage('docker build') {
-    sh 'docker buid \
-    -t springapp \
-    . '
+    sh 'docker buid springapp .'
   }
 }
