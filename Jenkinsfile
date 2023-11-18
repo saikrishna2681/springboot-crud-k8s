@@ -22,8 +22,8 @@ node {
     {
     "files": [
         {
-            "pattern": "*/target/*.jar",
-            "target": "test/test/"
+            "pattern": "*.jar",
+            "target": "libs-release-local"
         }
       ]
     }"""
