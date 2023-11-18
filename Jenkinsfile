@@ -23,7 +23,7 @@ node {
     "files": [
         {
             "pattern": "*.jar",
-            "target": "libs-release-local"
+            "target": "test/"
         }
       ]
     }"""
