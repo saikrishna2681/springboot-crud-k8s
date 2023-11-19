@@ -2,6 +2,11 @@ node {
   stage('checkout') {
     checkout scm
   }
+
+  stage ('Static code check') {
+    //SOnar qube analysis
+  }
+  
   stage('compile package') {
     def mvnhome = tool name: 'maven-3', type: 'maven'
     sh "${mvnhome}/bin/mvn install -DskipTests"
@@ -20,6 +25,10 @@ node {
       ]
     }"""
     server.upload(uploadSpec)
+  }
+
+  stage("Dynamic code analysis") {
+    //Jacoco report
   }
   
   stage('docker build') {
