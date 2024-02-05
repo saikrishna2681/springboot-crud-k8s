@@ -8,7 +8,7 @@ pipeline {
     }
     stage('compile package') {
       steps{
-        bat 'maven-3 --version'
+        bat 'mvn --version'
       }
     }
   }
