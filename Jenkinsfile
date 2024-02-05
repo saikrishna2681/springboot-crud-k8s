@@ -8,7 +8,7 @@ pipeline {
     }
     stage('compile package') {
       steps{
-        def mvnhome = tool name: 'maven-3', type: 'maven'
+        sh 'maven-3 --version'
       }
     }
   }
