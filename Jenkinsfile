@@ -1,10 +1,15 @@
 pipeline {
+  agent any
   stages{
     stage('checkout') {
-      checkout scm
+      steps{
+        checkout scm
+      }
     }
     stage('compile package') {
-      def mvnhome = tool name: 'maven-3', type: 'maven'
+      steps{
+        def mvnhome = tool name: 'maven-3', type: 'maven'
+      }
     }
   }
 }
