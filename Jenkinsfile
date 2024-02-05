@@ -8,7 +8,8 @@ pipeline {
     }
     stage('compile package') {
       steps{
-        bat 'mvn --version'
+        def mvnhome = tool name: 'maven-3', type: 'maven'
+        bat "${mvnhome}/bin/mvn install -DskipTests"
       }
     }
   }
