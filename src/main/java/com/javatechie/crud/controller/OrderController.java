@@ -4,10 +4,15 @@ import com.javatechie.crud.entity.Order;
 import com.javatechie.crud.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@EnableAutoConfiguration
 @RequestMapping("/orders")
 public class OrderController {
 
