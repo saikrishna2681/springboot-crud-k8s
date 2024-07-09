@@ -14,3 +14,4 @@ spring:
       ddl-auto: update
 logging:
   file.name: /var/lib/springapp/application.log
+  level: DEBUG
