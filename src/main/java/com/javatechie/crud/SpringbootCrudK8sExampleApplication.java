@@ -14,7 +14,11 @@ public class SpringbootCrudK8sExampleApplication {
 	public static void main(String[] args) {
 		logger.info("this is a info message");
 		logger.info("app execution started : "+args);
+		logger.debug("this is a info message");
+		logger.debug("app execution started : "+args);
 		SpringApplication.run(SpringbootCrudK8sExampleApplication.class, args);
+		logger.debug("this is from debug after calling run() : "+args);
+		logger.debug("app execution started from debug after calling run()  : "+args);
 		logger.info("after calling run() : "+args)
 		logger.info("App execution completed");
 	}
