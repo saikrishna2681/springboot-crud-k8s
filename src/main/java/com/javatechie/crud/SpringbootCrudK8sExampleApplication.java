@@ -13,7 +13,9 @@ public class SpringbootCrudK8sExampleApplication {
 	private static final Logger logger = LoggerFactory.getLogger(SpringbootCrudK8sExampleApplication.class);
 	public static void main(String[] args) {
 		logger.info("this is a info message");
+		logger.info("app execution started : "+args);
 		SpringApplication.run(SpringbootCrudK8sExampleApplication.class, args);
+		logger.info("after calling run() : "+args)
 		logger.info("App execution completed");
 	}
 
