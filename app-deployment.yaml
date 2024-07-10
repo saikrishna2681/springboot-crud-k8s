@@ -28,7 +28,7 @@ spec:
       containers:
         - name: springboot-crud-k8s
           imagePullPolicy: Always
-          image: 2681/spcrud:latest
+          image: 2681/spcrud:v1
           ports:
             - containerPort: 8080
           env:   # Setting Enviornmental Variables
