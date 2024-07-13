@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: hello
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: busybox
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - /myscript/backup_log.sh
+            volumeMounts:
+            - name: script-dir
+              mountPath: /myscript
+          restartPolicy: Never
+          volumes:
+          - name: script-dir
+            hostPath:
+              path: /minikube-host/practise/springboot-crud-k8s/
